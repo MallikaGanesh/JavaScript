@@ -1,0 +1,11 @@
+.body{
+    background-color:#808080;
+    margin-left: 200px;
+    margin-right: 300px;
+}
+.quote{
+    border: 1px solid white;
+    margin-right: 400px;
+    padding: 20px;
+    text-align: center;
+}

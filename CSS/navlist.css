@@ -1,0 +1,25 @@
+.body{
+    background-color: #e4e1e1;
+}
+
+ul{
+    list-style-type: none;
+    width: 200;
+    height: 275;
+    margin-left: 0px;
+    background-color: #6d6e6e;
+}
+li{
+    display: block;
+    padding: 4px;
+    width: 285px;
+    margin-left: -5px;
+    height: 18px;
+    margin-top: 15px;
+}
+
+img{
+    float: right;
+    height: 275px;
+    width: auto;
+}

@@ -1,0 +1,15 @@
+.box {
+    width: 238px;
+    height: 350px;
+    margin: 27px;
+    border: 2px solid grey;
+    align-items: center;
+    float: left;
+}
+
+.flex {
+    display: flex;
+    text-align:left;
+    height: auto;
+    flex-direction: column;
+}

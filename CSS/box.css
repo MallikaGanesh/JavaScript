@@ -1,0 +1,12 @@
+.box{
+    border:5px solid #a0937b;
+    width: 220px;
+    height: 65px;
+    margin:inherit;    
+    padding: 10px;
+}
+hr{
+    border:2px solid #a0937b;
+    width: 250;
+    margin:inherit
+}

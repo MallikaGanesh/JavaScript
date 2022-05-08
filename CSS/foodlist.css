@@ -1,0 +1,75 @@
+
+.box {
+    width: 600px;
+    height: 293px;
+    background-color: #52526b;
+    border: 3px solid;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f8ff;
+} 
+
+.column {
+    flex: 50%;
+}
+
+hr {
+    width: 720px;
+    margin-left: 0px;
+}
+
+.text {
+    font-weight: bold;
+}
+
+.sub-text {
+    font-style: italic;
+}
+
+.amt {
+    display: inline;
+    font-weight: bold;
+    align-content: right;
+}
+
+.inputText {
+    width: 30px;
+}
+
+.inputButton {
+    background-color: #7d2828;
+    color: #ffffff;
+    width: 75px;
+    border-radius: 20px;
+    height: 25px;
+    display: block;
+}
+
+.price {
+    display: inline;
+    font-weight: bold;
+    color: #c92c2c;
+
+}
+
+@media screen and (min-width:48px) {
+    .box {
+        flex: 25%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .row {
+        flex: auto;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .box {
+        flex-direction: row;
+    }
+}

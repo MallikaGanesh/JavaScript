@@ -1,0 +1,27 @@
+h3
+{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.bodystyle{
+    background-color: #D3D3D3;
+  }
+
+img{
+    height: 200px;
+    width:200px;
+  }
+
+  .flex{
+    display: flex;    
+    float: left;
+    text-align: left;
+    margin-left: 144px;
+  }
+
+  .box{
+    width: 200px;
+    height:250px;
+    margin:20px;
+}
