@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Assignment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 align="center">Javascript Assignment from 1 to 6</h2>
+        <br />
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#addNum">Add Two Numbers</a></li>
+            <li><a data-toggle="tab" href="#areaTriangle">Area of Triangle</a></li>
+            <li><a data-toggle="tab" href="#swap">Swap Two Variables</a></li>
+            <li><a data-toggle="tab" href="#oddEven">Odd / Even </a></li>
+            <li><a data-toggle="tab" href="#largest">Largest among 3 numbers</a></li>
+            <li><a data-toggle="tab" href="#prime">Prime Number</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!--Add two numbers -->
+            <div id="addNum" class="tab-pane fade in active">
+                <table>
+                    <tr>
+                        <td>Enter first number</td>
+                        <td><input type="text" id="num1"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter second number</td>
+                        <td><input type="text" id="num2"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="addNumbers()">Add</button>
+                        </td>
+                    </tr>
+                </table>
+                <div id="addResult"></div>
+            </div>
+
+            <!-- Area of Triangle (b*h)/2 -->
+            <div id="areaTriangle" class="tab-pane fade">
+                <table>
+                    <tr>
+                        <td>Enter height number</td>
+                        <td><input type="text" id="height"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter base number</td>
+                        <td><input type="text" id="base"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="areaTriangle()">Calculate Area</button>
+                        </td>
+                    </tr>
+                </table>
+                <div id="area"></div>
+            </div>
+
+            <!--Swap two numbers-->
+            <div id="swap" class="tab-pane fade">
+                <table>
+                    <tr>
+                        <td>Enter the value of X</td>
+                        <td><input type="text" id="xValue"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter the value of Y</td>
+                        <td><input type="text" id="yValue"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="swapNumbers()">Swap</button>
+                        </td>
+                    </tr>
+                </table>
+                <div id="swapRes"></div>
+            </div>
+
+            <!--Odd / Even -->
+            <div id="oddEven" class="tab-pane fade">
+                <table>
+                    <tr>
+                        <td>Enter a number</td>
+                        <td><input type="text" id="num"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="oddEven()"> Odd / Even </button>
+                        </td>
+                    </tr>
+                </table>
+                <div id="oddEvenRes"></div>
+            </div>
+
+
+            <!--Largest of 3 Numbers-->
+            <div id="largest" class="tab-pane fade">
+                <table>
+                    <tr>
+                        <td>Enter first number</td>
+                        <td><input type="text" id="numX"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter second number</td>
+                        <td><input type="text" id="numY"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter third number</td>
+                        <td><input type="text" id="numZ"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="largest()">Add</button>
+                        </td>
+                    </tr>
+                </table>
+                <div id="largeResult"></div>
+            </div>
+
+
+            <!--Prime Number -->
+            <div id="prime" class="tab-pane fade">
+                <table>
+                    <tr>
+                        <td>Enter a number</td>
+                        <td><input type="text" id="pNum"> <br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="IsPrime()">Check Prime </button>
+                        </td>
+                    </tr>
+                </table>
+                <div id="primeRes"></div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    // function to add 2 numbers
+    function addNumbers() {
+        var a = document.getElementById("num1").value;
+        var b = document.getElementById("num2").value;
+        var result = Number(a) + Number(b);
+        document.getElementById("addResult").innerHTML = "Addition Result : " + result;
+    }
+
+
+    // to calculate area of a triangle
+    function areaTriangle() {
+        var h = document.getElementById("height").value;
+        var b = document.getElementById("base").value;
+        var res = (h * b) / 2;
+        document.getElementById("area").innerHTML = "Area of triangle (h*b)/2 : " + res;
+    }
+
+    // swap the given numbers
+    function swapNumbers() {
+        var x = document.getElementById("xValue").value;
+        var y = document.getElementById("yValue").value;
+        x = Number(x) + Number(y);
+        y = x - Number(y);
+        x = x - y;
+        document.getElementById("swapRes").innerHTML = "After swaping X : " + x + " Y : " + y;
+    }
+
+    // check if the given number is odd or even
+    function oddEven() {
+        var x = document.getElementById("num").value;
+        var res = x % 2;
+        if (res == 0) {
+            document.getElementById("oddEvenRes").innerHTML = x + " is an Even number";
+        }
+        else {
+            document.getElementById("oddEvenRes").innerHTML = x + " is an Odd number";
+        }
+    }
+
+
+    // function to find the largest of three numbers
+    function largest() {
+        var x = document.getElementById("numX").value;
+        var y = document.getElementById("numY").value;
+        var z = document.getElementById("numZ").value;
+
+        if (Number(x) >Number(y) && Number(x) > Number(y)) {
+            document.getElementById("largeResult").innerHTML = x + " is the largest among the given numbers";
+        } else if (Number(y) > Number(z) && Number(y) > Number(z)) {
+            document.getElementById("largeResult").innerHTML = y + " is the largest among the given numbers";
+        } else {
+            document.getElementById("largeResult").innerHTML = z + " is the largest among the given numbers";
+        }
+    }
+
+    // check if the given number is prime or not
+    function IsPrime(){
+        var x=document.getElementById("pNum").value;
+        var i=2;
+        var flag=true;
+        if(Number(x)==2){
+            document.getElementById("primeRes").innerHTML = x + " is a Prime Number";
+        }
+        else{
+            for (i=2;i<Number(x)-1;i++){
+                if (Number(x)%i==0){ // if divisible by other numbers, given no. is not prime
+                    flag=false;
+                    break;
+                }
+            }
+            if(flag==true){
+                document.getElementById("primeRes").innerHTML=x + " is a Prime Number";
+            }
+            else if(flag==false){
+                document.getElementById("primeRes").innerHTML=x + " is not a Prime Number";
+            }
+        }
+    }
+</script>
