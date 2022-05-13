@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title> 9 Basketball Score </title>
+</head>
+<script>
+    function average() {
+        // Calulate Salman team's avg
+        var sScore1 = document.getElementById("sScore1").value;
+        var sScore2 = document.getElementById("sScore2").value;
+        var sScore3 = document.getElementById("sScore3").value;
+
+        var salmanAvg = (Number(sScore1) + Number(sScore2) + Number(sScore3)) / 3;
+
+        // Calulate Mike team's avg
+        var mikeScore1 = document.getElementById("mikeScore1").value;
+        var mikeScore2 = document.getElementById("mikeScore2").value;
+        var mikeScore3 = document.getElementById("mikeScore3").value;
+
+        var mikeAvg = (Number(mikeScore1) + Number(mikeScore2) + Number(mikeScore3)) / 3;
+
+        // Calulate Mary team's avg
+        var maryScore1 = document.getElementById("maryScore1").value;
+        var maryScore2 = document.getElementById("maryScore2").value;
+        var maryScore3 = document.getElementById("maryScore3").value;
+
+        var maryAvg = (Number(maryScore1) + Number(maryScore2) + Number(maryScore3)) / 3;
+
+
+        if (maryAvg == 0) {
+            if (salmanAvg > mikeAvg) {
+                console.log("Salman's team wins with the average of " + salmanAvg)
+            } else if (mikeAvg > salmanAvg) {
+                console.log("Mike's team wins with the average of " + mikeAvg)
+            } else if (salmanAvg == mikeAvg) {
+                console.log("Salman's team and Mike's team draws the match with the average of " + salmanAvg)
+            }
+        }
+
+        if (maryAvg != 0) {
+            if (salmanAvg > mikeAvg && salmanAvg > maryAvg) {
+                console.log("Salman's team wins with the average of " + salmanAvg)
+            } else if (mikeAvg > salmanAvg && mikeAvg > maryAvg) {
+                console.log("Mike's team wins with the average of " + mikeAvg)
+            } else if (maryAvg > salmanAvg && maryAvg > mikeAvg) {
+                console.log("Mary's team wins with the average of " + maryAvg)
+            }
+        }
+    }
+</script>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>Enter Salman's team score</td>
+                <td><input type="number" id="sScore1"> <br /></td>
+                <td><input type="number" id="sScore2"> <br /></td>
+                <td><input type="number" id="sScore3"> <br /></td>
+            </tr>
+
+            <tr>
+                <td>Enter Mike's team score</td>
+                <td><input type="number" id="mikeScore1"> <br /></td>
+                <td><input type="number" id="mikeScore2"> <br /></td>
+                <td><input type="number" id="mikeScore3"> <br /></td>
+            </tr>
+
+            <tr>
+                <td>Enter Mary's team score</td>
+                <td><input type="number" id="maryScore1"> <br /></td>
+                <td><input type="number" id="maryScore2"> <br /></td>
+                <td><input type="number" id="maryScore3"> <br /></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button onclick="average()">Show Winner</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

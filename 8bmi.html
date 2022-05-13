@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title> 8 BMI </title>
+</head>
+<script>
+    function compare() {
+        // store Harry's height and Mass
+        var hHeight = document.getElementById("hHeight").value;
+        var hMass = document.getElementById("hMass").value;
+
+        // store Salman's height and Mass
+        var sHeight = document.getElementById("sHeight").value;
+        var sMass = document.getElementById("sMass").value;
+
+        // calculate both BMI
+        var hBMI = hMass / (hHeight * hHeight);
+        var sBMI = sMass / (sHeight * sHeight);
+
+        // boolean var to store comparision value
+        var isHigh = false;
+
+        if (hBMI > sBMI) { // if Harry's BMI is high, set the bool var as true 
+            isHigh = true;
+        }
+
+        // print the result in the console.log
+        console.log("Is Harry's BMI higher than Salman's? " + isHigh);
+    }
+</script>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>Enter Harry's height</td>
+                <td><input type="number" id="hHeight"> <br /></td>
+            </tr>
+            <tr>
+                <td>Enter Harry's mass</td>
+                <td><input type="number" id="hMass"> <br /></td>
+            </tr>
+
+            <tr>
+                <td>Enter Salman's height</td>
+                <td><input type="number" id="sHeight"> <br /></td>
+            </tr>
+            <tr>
+                <td>Enter Salman's mass</td>
+                <td><input type="number" id="sMass"> <br /></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="compare()">compare</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
