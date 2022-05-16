@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Index</title>
+
+    <script>
+        function indexOf() {
+            var str = document.getElementById("name").value;
+            var num = Number(document.getElementById("index").value);
+            var char  = str.charAt(num);
+            document.getElementById("res").innerHTML = char + " is at " + num ;
+        }
+    </script>
+</head>
+
+<body>
+    Enter the string<input type="text" id="name"> <br/>
+    Enter a number <input type="text" id="index"> <br/>
+    <input type="button" id="submit" value="indexOf" onclick="indexOf()">
+    <div id="res"></div>
+</body>
+
+</html>

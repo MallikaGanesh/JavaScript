@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Length of String</title>
+
+    <script>
+        function getLength() {
+            var str = document.getElementById("name").value;
+            var strLen = str.length;
+            document.getElementById("res").innerHTML = "Length of " + str + " is : " + strLen;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="name">
+    <input type="button" id="submit" value="Get Length" onclick="getLength()">
+    <div id="res"></div>
+</body>
+
+</html>

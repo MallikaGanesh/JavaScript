@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Split</title>
+
+    <script>
+        function split() {
+            var str = document.getElementById("name").value;
+            var pos = Number(document.getElementById("pos").value);
+            var noOfChars = Number(document.getElementById("noOfChars").value);
+            var subStr  = str.substr(pos, noOfChars);
+            document.getElementById("split").innerHTML = subStr ;
+        }
+    </script>
+</head>
+
+<body>
+    Enter the string<input type="text" id="name"> <br/>
+    Enter starting position <input type="text" id="pos"> <br/>
+    Enter number of chars to extraxt <input type="text" id="noOfChars"> <br/>
+    <input type="button" id="splitVal" value="split" onclick="split()">
+    <div id="split"></div>
+</body>
+
+</html>
