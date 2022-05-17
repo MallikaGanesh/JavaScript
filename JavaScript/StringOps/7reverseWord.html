@@ -1,0 +1,25 @@
+ <html>
+
+<head>
+    <title>Reverse each word</title>
+
+    <script>
+        function reverseWord() {
+            var str = document.getElementById("name").value;
+            var words = str.split(" "); //split by words and store in array
+            var resStr = "";
+            for (i=0; i<words.length;i++){
+                resStr += words[i].split("").reverse().join("") + " ";
+            }
+            document.getElementById("split").innerHTML = resStr;
+        }
+    </script>
+</head>
+
+<body>
+    Enter a sentence<input type="text" id="name"> <br/>
+    <input type="button" id="splitVal" value="Reverse each word" onclick="reverseWord()">
+    <div id="split"></div>
+</body>
+
+</html> 

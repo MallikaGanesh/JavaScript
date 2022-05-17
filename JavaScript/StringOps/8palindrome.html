@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Palindrome</title>
+
+    <script>
+        function reverseStr() {
+            var str = document.getElementById("name").value;
+            var reverseStr = str.split("").reverse().join("");
+
+            if (str == reverseStr){
+                document.getElementById("split").innerHTML ="Palindrome : " + true;
+            }
+            else{
+                document.getElementById("split").innerHTML ="Palindrome : " + false;
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    Enter the string<input type="text" id="name"> <br/>
+    <input type="button" id="splitVal" value="Check Palindrome" onclick="reverseStr()">
+    <div id="split"></div>
+</body>
+
+</html>

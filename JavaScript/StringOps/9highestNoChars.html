@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Highest no of char occurrence</title>
+
+    <script>
+        function countChar() {
+            var str = document.getElementById("name").value;
+            //sort the array
+            var sortStr = str.split("").sort();
+
+            var tempCount = 1;
+            var highCount = 1;
+            var highChar = "";
+            for (i = 1; i < sortStr.length; i++) {
+                if (sortStr[i] == sortStr[i - 1]) {
+                    tempCount++; 
+                }
+                else {
+                    tempCount = 1;
+                }
+                if (tempCount > highCount) { // if temp count is greater, set it
+                    highCount = tempCount;
+                    highChar = sortStr[i];
+                }
+            }
+            document.getElementById("split").innerHTML = "Char " + highChar + " Occurs " + highCount;
+        }
+    </script>
+</head>
+
+<body>
+    Enter the string<input type="text" id="name"> <br />
+    <input type="button" id="splitVal" value="Check occurrence" onclick="countChar()">
+    <div id="split"></div>
+</body>
+
+</html>

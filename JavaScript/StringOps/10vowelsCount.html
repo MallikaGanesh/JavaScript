@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Vowels Count</title>
+
+    <script>
+        function countVowels() {
+            var str = document.getElementById("name").value;
+
+            var count = 0;
+
+            for (i = 0; i < str.length; i++) {
+                if ( (str[i].toUpperCase() == 'A') ||  (str[i].toUpperCase() == 'E') || (str[i].toUpperCase() == 'I') || (str[i].toUpperCase() == 'O') || (str[i].toUpperCase() == 'U') ){
+                    ++count; 
+                }
+            }
+            document.getElementById("vowel").innerHTML = "No. of Vowels in " + str + " is : " + count;
+        }
+    </script>
+</head>
+
+<body>
+    Enter the string<input type="text" id="name"> <br />
+    <input type="button" id="splitVal" value="Count Vowels" onclick="countVowels()">
+    <div id="vowel"></div>
+</body>
+
+</html>

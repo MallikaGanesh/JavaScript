@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Vowels Count</title>
+
+    <script>
+        function checkAnagram() {
+            var str1 = document.getElementById("name1").value;
+            var str2 = document.getElementById("name2").value;
+
+            var strTemp1 = str1.split("").sort().join("");
+            var strTemp2 = str2.split("").sort().join("");
+
+            if(strTemp1 === strTemp2){
+                document.getElementById("anagram").innerHTML = "Given words are anagram ?" + true;
+            }
+            else{
+                document.getElementById("anagram").innerHTML = "Given words are anagram ?" + false;
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    Enter the string1<input type="text" id="name1"> <br />
+    Enter the string2<input type="text" id="name2"> <br />
+    <input type="button" id="splitVal" value="Check Anagram" onclick="checkAnagram()">
+    <div id="anagram"></div>
+</body>
+
+</html>
