@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Array : Without Reverse</title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Without Reverse" onclick="revArray()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function revArray() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        var array = input.split(","); // convert string to array 
+        var resultArray = " ";
+        for (i = array.length-1; i >=0; i--){ //reverse without using reverse function
+            resultArray += array[i] + " "
+        }
+        document.getElementById("res").innerHTML = "Output is : " + resultArray; 
+    }
+</script>

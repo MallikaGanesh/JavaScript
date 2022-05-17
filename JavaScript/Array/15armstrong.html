@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Array : Armstrong</title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Armstrong" onclick="armstrong()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function armstrong() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        var array = input.split(","); // convert string to array 
+        var output=" ";
+        var total = 0;
+        for (i =0; i<array.length;i++){
+            temp = array[i];
+            rev=temp.split("");
+            for(k=0;k<rev.length;k++){
+                total += Math.pow(rev[k],3); // add the cube of each digit
+            }   
+            if (temp == total){
+                output += array[i] + "  ";
+            }
+            total=0;
+        }
+        document.getElementById("res").innerHTML = "Output is : " + output; 
+    }
+</script>

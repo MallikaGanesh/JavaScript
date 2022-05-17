@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Array : for each</title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="using for each" onclick="forEachloop()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function forEachloop() {
+        var output="";
+        var result =  document.getElementById("inputArray").value;
+        Array.from(result).forEach(function (input) {
+            console.log(input);
+            output += input;
+        })
+        document.getElementById("res").innerHTML = "Output is : [ " + output + "]";
+    }
+</script>

@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Array : Ascending order</title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Ascending order" onclick="ascArray()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function ascArray() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        input = input.split(",");
+        var ascOrder = input.sort(function (a, b) {
+            return a - b;
+        });
+        document.getElementById("res").innerHTML = "Output is : " + ascOrder;
+    }
+</script>

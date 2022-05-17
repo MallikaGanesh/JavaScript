@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Array : Built in Reverse</title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Built in Reverse" onclick="revArray()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function revArray() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        var array = input.split(","); // convert string to array 
+        document.getElementById("res").innerHTML = "Output is : " + array.reverse(); //reverse using builtin reverse function
+    }
+</script>

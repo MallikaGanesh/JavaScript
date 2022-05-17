@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Array : for loop</title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="using for loop" onclick="forLoop()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function forLoop() {
+        var input = document.getElementById("inputArray").value;
+        var output="[";
+
+        // traverse using for loop
+        for (i = 0; i<input.length; i++)
+            output += input[i];
+        document.getElementById("res").innerHTML = "Output is : " + output + "]";
+    }
+</script>

@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Array : Decending order</title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Decending order" onclick="descArray()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function descArray() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        input = input.split(",");
+        var descOrder = input.sort(function (a, b) {
+            return b - a;
+        });
+        document.getElementById("res").innerHTML = "Output is : " + descOrder;
+    }
+</script>

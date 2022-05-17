@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Array : Divisible by 5 or 2 </title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Check Divisibility" onclick="divisible()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function divisible() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        input = input.split(",");
+        var output = " ";
+        for (var i = 0; i < input.length; i++) {
+
+            if ((input[i] % 2 == 0) || (input[i] % 5 == 0)) {
+                output += input[i] + " ";
+            }
+        }
+        document.getElementById("res").innerHTML = "Output is : " + output;
+    }
+
+</script>

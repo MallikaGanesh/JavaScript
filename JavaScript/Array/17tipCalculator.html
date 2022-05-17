@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Array : Tip calculator</title>
+</head>
+
+<body>
+    <input type="button" value="Convert" onclick="calculateTips()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function calculateTips() {
+        var bill = [124, 48, 268];
+        var tips = new Array(bill.length);
+        var total = new Array(bill.length);
+
+        for (i=0; i<bill.length;i++){
+            if (bill[i]<50){
+                tips[i] = (bill[i] * 0.2).toFixed(2);
+            }else if(bill[i]>50 && bill[i]<200){
+                tips[i] = (bill[i] * 0.15).toFixed(2);
+            }else if (bill[i]>200){
+                tips[i] = (bill[i] * 0.10).toFixed(2);
+            }
+            total[i] = Number(bill[i]) + Number(tips[i]);
+        }
+        document.getElementById("res").innerHTML = "Bill  : [" + bill + "]<br/> tips  : [" + tips + "] <br/>total : [" + total + "]"; 
+    }
+</script>

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Array : Sub Sequence </title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="subSequence" onclick="subSequence()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function subSequence() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        input = input.split(",");
+        var temp=0;
+        var result = new Array();
+        result[0]="";
+        for (var i = 0; i < input.length; i++) {
+            if (input[i]>0){
+                result[temp] += input[i] + " ";
+            }
+            else{
+                temp++;
+                result[temp]="";
+            }
+            
+        }
+        for (i=0; i<result.length;i++){
+            result[i]= " [" + result[i] + "] "
+        }
+        document.getElementById("res").innerHTML = "Output is : " + result;
+    }
+
+</script>

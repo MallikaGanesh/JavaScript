@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Array : Convert to array</title>
+</head>
+
+<body>
+    Enter number<input type="text" id="inputNum"><br/>
+    Enter string<input type="text" id="inputStr"><br/>
+    <input type="button" value="Convert" onclick="convertToArray()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function convertToArray() {
+        var inputNum = document.getElementById("inputNum").value; // read from textbox
+        var inputStr = document.getElementById("inputStr").value;
+        var arrayNum = inputNum.split(""); // convert string to array 
+        var arrayStr = inputStr.split("");
+        document.getElementById("res").innerHTML = "Number array : [" + arrayNum + "]<br/> String array : [" + arrayStr + "]"; 
+    }
+</script>

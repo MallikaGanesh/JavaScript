@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Array : Prime Number </title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Check Prime" onclick="prime()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function prime() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        input = input.split(",");
+        var output = " ";
+        var flag=true;
+        for (var i = 0; i < input.length; i++) { // loop through the array
+            if (Number(input[i]) == 2) { // if the number is 2, add to the output list
+                output += input[i] + " ";
+            }
+            else {
+                for (j = 2; j < Number(input[i]) - 1; j++) { // if >2, loop till number - 1
+                    if (Number(input[i]) % j == 0) { // if divisible by other numbers, given no. is not prime
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag == true) {
+                    output += input[i] + " ";
+                }
+                flag=true;
+            }
+        }
+        document.getElementById("res").innerHTML = "Output is : " + output;
+    }
+
+</script>

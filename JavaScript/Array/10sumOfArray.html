@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Array : Sum of array </title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Sum" onclick="sum()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function sum() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        input = input.split(",");
+        var output = 0;
+        for (var i = 0; i < input.length; i++) {
+            output += Number(input[i]) ;
+        }
+        document.getElementById("res").innerHTML = "Output is : " + output;
+    }
+
+</script>

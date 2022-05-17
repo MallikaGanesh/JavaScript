@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Array : Palindrome in array</title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Palindrome" onclick="palindrome()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function palindrome() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        var array = input.split(","); // convert string to array 
+        var output=" ";
+        for (i =0; i<array.length;i++){
+            temp = array[i];
+            rev=temp.split("").reverse().join("");   
+            if (array[i] == rev){
+                output += array[i] + " ";
+            }
+        }
+        document.getElementById("res").innerHTML = "Output is : " + output; 
+    }
+</script>

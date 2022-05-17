@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Array : Chunks of 2 </title>
+</head>
+
+<body>
+    <input type="text" id="inputArray">
+    <input type="button" value="Chunks" onclick="chunks()">
+    <div id="res"></div>
+</body>
+
+</html>
+<script>
+    function chunks() {
+        var input = document.getElementById("inputArray").value; // read from textbox
+        input = input.split(",");
+        var temp=0;
+        var result = new Array(Math.ceil(input.length / 2));
+        for (var i = 0; i < input.length; i+=2) {
+            result[temp] = "[" + input.slice(i, i+2) + "]";
+            temp++;
+        }
+        document.getElementById("res").innerHTML = "Output is : " + result;
+    }
+
+</script>
